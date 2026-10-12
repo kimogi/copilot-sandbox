@@ -1,16 +1,16 @@
-## Docker Sandbox for github-copilot
+## Docker Sandbox for GitHub Copilot
 
-***How it works:*** An instance of Copilot CLI runs in _rootless_ Docker container with controlled access to network and mounted volumes containing relevant context.
+***How it works:*** An instance of Copilot CLI runs in _rootless_ Docker container with controlled access to the network and mounted volumes containing relevant context.
 
 ### Requirements
 - Ubuntu Host System
 - Rootless Docker
-- Valid github-copilot Credentials
+- Valid GitHub Copilot credentials
 
 ### Useful features
 
-- Copilot Credentials and configs are saved in the external volume and survice the containers relaunch. You only need to setup once.
-- Multiple instances can run simultaniously with several isolated Copilot sessions.
+- Copilot Credentials and configs are saved in the external volume and survive container relaunches. You only need to set them up once.
+- Multiple instances can run simultaneously with several isolated Copilot sessions.
 - By default, your ```$pwd``` is mounted as the external context volume into ```/workspace``` container path. So you can just ```cd``` to your workspace on your host machine and start working.
 
 ### Setup
@@ -27,7 +27,7 @@ Add copilot-sandbox to PATH
 export PATH=$PATH:/$HOME/copilot-sandbox
 ```
 
-Navigate to your project workspace direcroty with relevant sources and launch ```copilot-sandbox.sh```
+Navigate to your project workspace directory with relevant sources and launch ```copilot-sandbox.sh```
 
 This will run the Docker container and log you in. You should see this banner.
 
@@ -42,7 +42,7 @@ Inside the container, run 'copilot' to open the CLI.
 root@copilot-sandbox:/workspace#
 ```
 
-Run ```copilot``` and follow the usual Copilot CLI setup steps. You only need to setup once. After setup is done you can quit the container and relaunch as many instances as you need.
+Run ```copilot``` and follow the usual Copilot CLI setup steps. You only need to set it up once. After setup is done, you can quit the container and relaunch as many instances as you need.
 
 ### Workflow
 
@@ -53,4 +53,4 @@ Run ```copilot``` and follow the usual Copilot CLI setup steps. You only need to
 
 ### References
 
-To setup Rootless Docker refer to the following tutorial [Sandbox your GitHub Copilot CLI on Linux](https://georg.dev/blog/07-sandbox-your-github-copilot-cli-on-linux/)
+To set up Rootless Docker, refer to the following tutorial [Sandbox your GitHub Copilot CLI on Linux](https://georg.dev/blog/07-sandbox-your-github-copilot-cli-on-linux/)
