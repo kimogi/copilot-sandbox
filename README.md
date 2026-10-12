@@ -1,4 +1,4 @@
-## Ubuntu Sandbox for github-copilot
+## Docker Sandbox for github-copilot
 
 ***How it works:*** An instance of Copilot CLI runs in _rootless_ Docker container with controlled access to network and mounted volumes containing relevant context.
 
